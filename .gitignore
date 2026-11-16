@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.ipynb_checkpoints/
+*.pth
+*.pt
+*.log
+results/glucose_regulation/runs/
+examples/**/quick_results/
+examples/**/glucose_results_*/

@@ -1,0 +1,40 @@
+lac_operon:
+  description: "Lactose operon induction by IPTG and glucose repression"
+  
+  input_features:
+    - name: "glucose"
+      unit: "mM"
+      range: [0.0001, 30]
+      scale: "log"
+    - name: "iptg"
+      unit: "mM"
+      range: [0.0001, 30]
+      scale: "log"
+  
+  output_features:
+    - name: "gfp"
+      unit: "AU"
+      transform: "log10"
+  
+  data:
+    source: "simulation"
+    path: "experiments/01_lac_operon/data/simulation_data.csv"
+  
+  model:
+    architecture: "feedforward"
+    hidden_layers: [64, 64, 32]
+    activation: "relu"
+    dropout: 0.1
+    use_batch_norm: true
+  
+  training:
+    epochs: 2000
+    batch_size: 64
+    learning_rate: 0.001
+    optimizer: "adam"
+    test_size: 0.2
+    val_size: 0.1
+    early_stopping_patience: 100
+    seed: 42
+  
+  task_type: "regression"

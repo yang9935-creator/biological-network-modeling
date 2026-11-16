@@ -1,0 +1,42 @@
+============================================================
+GLUCOSE METABOLISM MODEL: DISCOVERED PARSIMONIOUS EQUATION
+============================================================
+
+Timestamp: 2026-03-04 09:32:54
+
+DISCOVERED DIFFERENTIAL EQUATION:
+----------------------------------------
+dG/dt = 0.0000 - 1.1892 * G^2.5 / (5.0056^2.5 + G^2.5)
+
+PARAMETERS:
+----------------------------------------
+a = 0.000000
+b = 1.189236
+c = 5.005638
+d = 2.546781
+
+FIT STATISTICS:
+----------------------------------------
+Training MSE: 0.078522
+Extrapolation MSE: 0.133731
+Fitness score: 0.000736
+
+PHYSIOLOGICAL INTERPRETATION:
+----------------------------------------
+- The constant term represents basal hepatic glucose output and/or food absorption
+- The linear term in G represents insulin-independent consumption (e.g., brain)
+- The nonlinear term represents insulin-dependent peripheral tissue uptake (muscle, adipose)
+- The saturation term (K_m) reflects the limited capacity of transport proteins
+
+DETAILED ANALYSIS:
+----------------------------------------
+Equation form: dG/dt = 0.0000 - 1.1892 * G^2.5 / (5.0056^2.5 + G^2.5)
+Half-saturation constant (K_m): 5.01 mmol/L
+Hill coefficient: 2.55 (indicates positive cooperativity)
+
+COMPARISON WITH KNOWN PHYSIOLOGY:
+----------------------------------------
+- Normal fasting glucose: 4.0-5.5 mmol/L
+- Typical K_m for GLUT transporters: 5-10 mmol/L
+- Brain glucose uptake K_m: ~1 mmol/L (high affinity)
+- Muscle GLUT4 K_m: ~5 mmol/L (insulin-dependent)
