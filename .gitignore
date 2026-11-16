@@ -10,3 +10,5 @@ __pycache__/
 results/glucose_regulation/runs/
 examples/**/quick_results/
 examples/**/glucose_results_*/
+
+.History
